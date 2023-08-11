@@ -1,3 +1,5 @@
 # Mean versus variability of global climate data
 
-Exploratory look, for work with Eva Sinha
+Exploratory, for work with Eva Sinha
+
+![Temperature](README.jpg)
