@@ -15,8 +15,8 @@ pts <- expand.grid(x = c(-100, -90, -80), y = c(30, 40, 50))
 ex <- terra::ext(-100, -85, 30, 50) # roughly the upper Midwest
 t_mw_raw <- terra::extract(tavg_global, pts)
 p_mw_raw <- terra::extract(prec_global, pts)
-t_mw <- tibble(t_mean = apply(t_mw_raw, 1, mean) / 10,
-               t_sd = apply(t_mw_raw, 1, sd) / 10)
+t_mw <- tibble(t_mean = apply(t_mw_raw, 1, mean),
+               t_sd = apply(t_mw_raw, 1, sd))
 t_mw <- na.omit(t_mw)
 p_mw <- tibble(p_sum = apply(p_mw_raw, 1, sum),
                p_sd = apply(p_mw_raw, 1, sd))
@@ -54,8 +54,8 @@ p_dat <- tibble(x = precip_global$x,
                 p_sd = as.vector(p_sd_global))
 t_dat <- tibble(x = tmean_global$x,
                 y = tmean_global$y, 
-                t_mean = as.vector(t_mean_global) / 10,
-                t_sd = as.vector(t_sd_global) / 10)
+                t_mean = as.vector(t_mean_global),
+                t_sd = as.vector(t_sd_global))
 
 # Plot
 library(ggplot2)
