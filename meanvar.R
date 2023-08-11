@@ -1,4 +1,6 @@
-# mean and variability of global climate data
+# Mean and variability of global climate data
+# BBL August 2023
+# Exploratory look, for work with Eva Sinha
 
 # Use WorldClim data and new terra/geodata packages
 
