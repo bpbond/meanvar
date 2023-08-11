@@ -47,3 +47,13 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# WorldClim data
+wc10/
+wc2.1/
+
+# Outputs
+*.png
+
+# OS files
+.DS_Store
